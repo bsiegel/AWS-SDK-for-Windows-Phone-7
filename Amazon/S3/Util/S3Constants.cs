@@ -52,6 +52,7 @@ namespace Amazon.S3.Util
         internal const string AmzVersionIdHeader = "x-amz-version-id";
         internal const string AmzStorageClassHeader = "x-amz-storage-class";
         internal const string AmzSecurityTokenHeader = "x-amz-security-token";
+        internal const string AmzServerSideEncryptionHeader = "x-amz-server-side-encryption";
 
         // Accepted HTTP Verbs
         internal static readonly string[] Verbs = { "GET", "HEAD", "PUT", "DELETE", "POST" };
@@ -63,6 +64,7 @@ namespace Amazon.S3.Util
 
         // Commonly used static strings
         internal const string RequestParam = "request";
+        internal const string AES256EncryptionParam = "AES256";
 
         // Bucket Version strings
         internal static readonly string[] BucketVersions = { "", "V1", "V2" };

@@ -58,6 +58,7 @@ namespace Amazon.S3.Model
         private int timeout = 0;
         private S3StorageClass storageClass;
         private bool autoCloseStream = true;
+        private bool serverSideEncryption = true;
 
         #endregion
 
@@ -424,6 +425,32 @@ namespace Amazon.S3.Model
         public PutObjectRequest WithAutoCloseStream(bool autoCloseStream)
         {
             this.autoCloseStream = autoCloseStream;
+            return this;
+        }
+        #endregion
+
+        #region ServerSideEncryption
+        /// <summary>
+        /// Gets and sets the ServerSideEncryption property. If this value is set to true
+        /// then the x-amz-server-side-encryption header will be set to request server-side
+        /// encryption.  The property is defaulted to true.
+        /// </summary>
+        public bool ServerSideEncryption
+        {
+            get { return this.serverSideEncryption; }
+            set { this.serverSideEncryption = value; }
+        }
+
+        /// <summary>
+        /// Sets the ServerSideEncryption property for this request. If this value is set to true
+        /// then the x-amz-server-side-encryption header will be set to request server-side
+        /// encryption.  The property is defaulted to true.
+        /// </summary>
+        /// <param name="serverSideEncryption">the value the ServerSideEncryption to be set to</param>
+        /// <returns>The request with the ServerSideEncryption set</returns>
+        public PutObjectRequest WithServerSideEncryption(bool serverSideEncryption)
+        {
+            this.serverSideEncryption = serverSideEncryption;
             return this;
         }
         #endregion

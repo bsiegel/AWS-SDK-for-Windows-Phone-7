@@ -561,6 +561,11 @@ namespace Amazon.S3
                 }
             }
 
+            if (request.ServerSideEncryption)
+            {
+                webHeaders[S3Constants.AmzServerSideEncryptionHeader] = S3Constants.AES256EncryptionParam;
+            }
+
             // Add the Timeout parameter
             parameters[S3QueryParameter.RequestTimeout] = request.Timeout.ToString();
             
